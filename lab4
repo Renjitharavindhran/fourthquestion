@@ -1,0 +1,168 @@
+mca@cmp41:~$ mkdir first
+mkdir: cannot create directory ‘first’: File exists
+mca@cmp41:~$ pwd
+/home/mca
+mca@cmp41:~$ git clone https://github.com/Renjitharavindhran/fourthquestion.git
+Cloning into 'fourthquestion'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+mca@cmp41:~$ cat>s1
+jhtfdftr
+^C
+mca@cmp41:~$ 
+mca@cmp41:~$ pwd
+/home/mca
+mca@cmp41:~$ cd fourthquestion
+mca@cmp41:~/fourthquestion$ pwd
+/home/mca/fourthquestion
+mca@cmp41:~/fourthquestion$ cat>c2
+hjuytgtgfy
+jbhhjh
+^C
+mca@cmp41:~/fourthquestion$ cat>z1
+jnhyghgh
+ghgg
+bbbbb
+cccc
+^C
+mca@cmp41:~/fourthquestion$ 
+mca@cmp41:~/fourthquestion$ git add .
+mca@cmp41:~/fourthquestion$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   c2
+	new file:   z1
+
+mca@cmp41:~/fourthquestion$ git commit -m "fff"
+[master 0e092f7] fff
+ 2 files changed, 6 insertions(+)
+ create mode 100644 c2
+ create mode 100644 z1
+mca@cmp41:~/fourthquestion$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+mca@cmp41:~/fourthquestion$ cat z2
+cat: z2: No such file or directory
+mca@cmp41:~/fourthquestion$ cat z1
+jnhyghgh
+ghgg
+bbbbb
+cccc
+mca@cmp41:~/fourthquestion$ git pull origin
+gAlready up-to-date.
+mca@cmp41:~/fourthquestion$ git push origin master
+Username for 'https://github.com': renjitharavindhran
+Password for 'https://renjitharavindhran@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 331 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Renjitharavindhran/fourthquestion.git
+   ccf8279..0e092f7  master -> master
+mca@cmp41:~/fourthquestion$ cat>>z1
+ggggg
+dddd
+^C
+mca@cmp41:~/fourthquestion$ git add .
+mca@cmp41:~/fourthquestion$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   z1
+
+mca@cmp41:~/fourthquestion$ git commit -m "fff"
+[master fcd0280] fff
+ 1 file changed, 2 insertions(+)
+mca@cmp41:~/fourthquestion$ git push origin master
+Username for 'https://github.com': renjitharavindhran
+Password for 'https://renjitharavindhran@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 267 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Renjitharavindhran/fourthquestion.git
+   0e092f7..fcd0280  master -> master
+mca@cmp41:~/fourthquestion$ cat z1
+jnhyghgh
+ghgg
+bbbbb
+cccc
+ggggg
+dddd
+mca@cmp41:~/fourthquestion$ git pull origin
+Already up-to-date.
+mca@cmp41:~/fourthquestion$ gedit z1
+    
+^C
+mca@cmp41:~/fourthquestion$ git add .
+mca@cmp41:~/fourthquestion$ git commit -m "gvffg"
+[master ae8d35b] gvffg
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+ create mode 100644 z1~
+mca@cmp41:~/fourthquestion$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+mca@cmp41:~/fourthquestion$ git push origin
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': renjitharavindhran
+Password for 'https://renjitharavindhran@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Renjitharavindhran/fourthquestion.git/'
+mca@cmp41:~/fourthquestion$ cat z1
+jnhyghgh
+ghgg
+baaaa
+cccc
+ggggg
+dddd
+mca@cmp41:~/fourthquestion$ gedit z1
+mca@cmp41:~/fourthquestion$ git pull origin master
+From https://github.com/Renjitharavindhran/fourthquestion
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+mca@cmp41:~/fourthquestion$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+mca@cmp41:~/fourthquestion$ gedit z1
+
